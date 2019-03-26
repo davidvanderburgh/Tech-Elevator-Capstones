@@ -1,0 +1,29 @@
+﻿@model List<Park>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach (Park park in Model)
+{
+    <div class="park">
+
+            
+           @{
+                string parkImageFile = "/images/parks/" + park.ParkCode.ToLower() + ".jpg";
+            }
+            <a asp-controller="Home" asp-action="Detail" asp-route-id="@park.ParkCode">
+                <img class="park_image" src="@parkImageFile" />
+            </a>
+            
+
+            <div class="park_text">
+                <a asp-controller="Home" asp-action="Detail" asp-route-id="@park.ParkCode">
+                    <h3>@park.ParkName - @park.State</h3>
+                </a>
+
+                <p>@park.Description</p>
+            </div>
+
+    </div>
+}

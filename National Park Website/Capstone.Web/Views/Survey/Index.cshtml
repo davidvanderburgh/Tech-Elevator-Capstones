@@ -1,0 +1,38 @@
+﻿@model SurveyViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>What is the best National Park?</h3>
+<p>Here is your chance to cast a vote to your favorite National Park!  </p>
+<p>Whichever park has the most votes by January 1st will be announced as our National Park Geek Best National Park!</p>
+
+<div class="SurveyZone" id="SurveyForm">
+    <form asp-controller="Survey" asp-action="Index">
+        <div class="SurveyZone" id="SurveySelectPark">
+            <label asp-for="SurveyInProcess.FavoriteNationalPark"></label>
+            <select asp-for="SurveyInProcess.FavoriteNationalPark" asp-items="Model.AllSelectableParks" class="form-control"></select>
+        </div>
+
+        <div class="SurveyZone" id="SurveyEmailAddress">
+            <label asp-for="SurveyInProcess.EmailAddress" class="control-label"></label>
+            <input asp-for="SurveyInProcess.EmailAddress" class="form-control" />
+            <span asp-validation-for="SurveyInProcess.EmailAddress" class="text-danger"></span>
+        </div>
+
+        <div class="SurveyZone" id="SurveyStateOfResidence">
+            <label asp-for="SurveyInProcess.StateOfResidence" class="control-label"></label>
+            <select asp-for="SurveyInProcess.StateOfResidence" asp-items="SurveyViewModel.StateOfResidenceListItems" class="form-control"></select>
+        </div>
+
+        <div class="SurveyZone" id="SurveySelectActivityLevel">
+            <label asp-for="SurveyInProcess.ActivityLevel" class="control-label"></label>
+            <select asp-for="SurveyInProcess.ActivityLevel" asp-items="SurveyViewModel.ActivityLevelListItems" class="form-control"></select>
+        </div>
+
+        <div class="SurveyZone" id="SurveySubmitButtonZone">
+            <input id="SurveySubmitButton" type="submit" value="Submit" class="btn btn-default"/>
+        </div>
+    </form>
+</div>

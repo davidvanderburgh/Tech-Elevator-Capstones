@@ -1,0 +1,143 @@
+﻿@model ParkDetailViewModel
+
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>@Model.Park.ParkName</h1>
+
+<div class="detail">
+
+    @{
+        string parkImageFile = "/images/parks/" + Model.Park.ParkCode.ToLower() + ".jpg";
+    }
+    <img class="detail_image" src="@parkImageFile" />
+
+    <div class="detail_facts">
+
+        <h2>Fun Park Facts</h2>
+        <ul class="list_facts">
+            <li>
+                Location: @Model.Park.State
+            </li>
+            <li>
+                Year Established: @Model.Park.YearFounded
+            </li>
+            <li>
+                Abbreviaton: @Model.Park.ParkCode
+            </li>
+            <li>
+                Acreage: @Model.Park.Acreage
+            </li>
+            <li>
+                Elevation (ft.): @Model.Park.ElevationInFeet
+            </li>
+            <li>
+                Miles of Trail: @Model.Park.MilesOfTrail
+            </li>
+            <li>
+                Number of Campsites: @Model.Park.NumberOfCampsites
+            </li>
+            <li>
+                Climate: @Model.Park.Climate
+            </li>
+            <li>
+                Number of Animal Species: @Model.Park.NumberOfAnimalSpecies
+            </li>
+            <li>
+                Annual Visitor Count: @Model.Park.AnnualVisitorCount
+            </li>
+            <li>
+                Entry Fee: $@Model.Park.EntryFee
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<p>@Model.Park.Description</p> <br>
+
+<p id="quote">"@Model.Park.Quote"</p>
+
+<p id="quote_source">- @Model.Park.QuoteSource</p>
+
+<br />
+<br />
+
+<h2>5-Day Forcast</h2>
+<br>
+
+    <div class="DetailFlexBoxWeather">
+
+        <div class="DetailFlexBoxWeatherCurrent">
+            <div id="DetailFlexBoxWeatherToday">
+                <h2>Today</h2>
+                @{
+                    string weatherImageFile = string.Empty;
+                    if (Model.DailyWeather[0].Forecast == "partly cloudy")
+                    {
+                        weatherImageFile = "/images/weather/" + "partlyCloudy" + ".png";
+                    }
+                    else
+                    {
+                        weatherImageFile = "/images/weather/" + Model.DailyWeather[0].Forecast + ".png";
+                    }
+                }
+                <img src="@weatherImageFile" />
+
+                <p id="DetailFlexBoxWeatherTodayForecastHighLow">High: @Model.DailyWeather[0].HighString(Model.InFahrenheit) Low: @Model.DailyWeather[0].LowString(Model.InFahrenheit)</p>
+            </div>
+            <br />
+            <p id="DetailFlexBoxWeatherTodayForecastRecommendation">@Model.DailyWeather[0].ForecastRecommendation</p>
+            @if (@Model.DailyWeather[0].TemperatureRecommendation != string.Empty)
+            {
+                <p id="DetailFlexBoxWeatherTodayTemperatureRecommendation">@Model.DailyWeather[0].TemperatureRecommendation</p>
+            }
+
+        </div>
+
+        <div id="DetailFlexBoxWeatherFuture">
+            @for (int i = 1; i < Model.DailyWeather.Count; i++)
+            {
+                <div class="DetailFlexBoxWeatherFutureDays">
+                    @{
+                        string futureWeatherImageFile = string.Empty;
+                        if (Model.DailyWeather[i].Forecast == "partly cloudy")
+                        {
+                            futureWeatherImageFile = "/images/weather/" + "partlyCloudy" + ".png";
+                        }
+                        else
+                        {
+                            futureWeatherImageFile = "/images/weather/" + Model.DailyWeather[i].Forecast + ".png";
+                        }
+                    }
+                    <img src="@futureWeatherImageFile" />
+                    <p id="DetailFlexBoxWeatherFutureForecastHigh">High: @Model.DailyWeather[i].HighString(Model.InFahrenheit)</p>
+                    <p id="DetailFlexBoxWeatherFutureForecastLow">Low: @Model.DailyWeather[i].LowString(Model.InFahrenheit)</p>
+                </div>
+            }
+        </div>
+    </div>
+
+<br />
+
+    <div class="temperature_toggle">
+        @{
+            string otherDegree = string.Empty;
+            if (Model.InFahrenheit)
+            {
+                otherDegree = "ºC";
+            }
+            else
+            {
+                otherDegree = "ºF";
+            }
+        }
+        <a class="button" asp-area="" asp-controller="Home" asp-action="ToggleTemp" asp-route-id="@Model.Park.ParkCode">
+            Show temperature in @otherDegree
+        </a>
+    </div>
+
+

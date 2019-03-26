@@ -1,0 +1,40 @@
+﻿@model List<SurveyResult>
+
+@{
+    ViewData["Title"] = "Results";
+}
+
+<h2>Results</h2>
+
+<table class="table" id="ResultsTable">
+    <thead>
+        <tr>
+            <th>
+                <span id="ResultsHeaderParkText">Park</span>
+            </th>
+            <th id="ResultsHeaderNumberOfVotesText">
+                <span id="ResultsHeaderNumberOfVotes"># of Votes</span>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SurveyResult result in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        string parkImageFile = "/images/parks/" + result.Park.ParkCode.ToLower() + ".jpg";
+                    }
+                    <a id="ResultsParkLink" asp-controller="Home" asp-action="Detail" asp-route-id="@result.Park.ParkCode">
+                        <img id="ResultsParkImage" src="@parkImageFile"/>
+                        <span id="ResultsParkName">@result.Park.ParkName</span>
+                    </a>
+                </td>
+                <td id="ResultsNumberOfVotesCell">
+                    <span id="ResultsNumberOfVotes">@result.Votes</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

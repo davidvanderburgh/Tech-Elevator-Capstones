@@ -1,0 +1,17 @@
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\CapstoneTests.deps.json
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\CapstoneTests.runtimeconfig.json
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\CapstoneTests.runtimeconfig.dev.json
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\CapstoneTests.dll
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\CapstoneTests.pdb
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\Capstone.dll
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\bin\Debug\netcoreapp2.1\Capstone.pdb
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\obj\Debug\netcoreapp2.1\CapstoneTests.csprojAssemblyReference.cache
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\obj\Debug\netcoreapp2.1\CapstoneTests.csproj.CoreCompileInputs.cache
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\obj\Debug\netcoreapp2.1\CapstoneTests.AssemblyInfoInputs.cache
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\obj\Debug\netcoreapp2.1\CapstoneTests.AssemblyInfo.cs
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\obj\Debug\netcoreapp2.1\CapstoneTests.csproj.CopyComplete
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\obj\Debug\netcoreapp2.1\CapstoneTests.dll
+C:\Users\davidv\team4-c-sharp-week4-pair-exercises\Mini-Capstone\CapstoneTests\obj\Debug\netcoreapp2.1\CapstoneTests.pdb

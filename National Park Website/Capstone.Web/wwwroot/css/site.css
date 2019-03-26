@@ -1,0 +1,343 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+body {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+header {
+    background-color: lightcyan;
+}
+
+header > img {
+    height: 175px;
+    padding: 20px;
+}
+
+nav, footer {
+    background-color: lime;
+    padding: 1%;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+    nav ul {
+        padding-left: 20px;
+        width: 200px;
+        list-style-type: none;
+        display: flex;
+       
+    }
+
+    nav li {
+        display: block;
+        width: 100px;
+        text-align: left;
+       
+    }
+
+    nav a {
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+       
+    }
+
+main {
+    margin-top: 10px;
+}
+
+.park {
+    padding: 20px 40px 40px;
+    display: flex;
+}
+
+.park_image {
+    margin: 20px 30px 0 0;
+    width: 500px;
+    object-fit: contain;
+    align-self: flex-start;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+}
+
+.park_text {
+    flex: 1 1 auto;
+    margin-top: 10px;
+}
+
+.park_text p {
+    font-size: large;
+    text-align: justify;
+}
+
+.detail {
+    padding: 10px 20px 30px;
+    display: flex;
+}
+
+h1 {
+    font-weight: bold;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+.detail_image {
+    margin: 10px 30px 30px 0px;
+    width: 750px;
+    object-fit: contain;
+    align-self: flex-start;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+}
+
+.detail_facts {
+    flex: 1 1 auto;
+    font-size: large;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.detail_facts h2 {
+    padding-left: 25px;
+    text-decoration: underline;
+}
+
+.detail_facts .list_facts {
+    line-height: 200%;
+}
+
+#quote {
+    font-size: medium;
+    font-style: italic;
+}
+
+#quote_source {
+    text-align: right;
+    font-style: normal;
+}
+
+
+.DetailFlexBoxWeather {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.DetailFlexBoxWeatherCurrent {
+    display: flex;
+    flex-direction: column;
+}
+
+#DetailFlexBoxWeatherToday {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+    #DetailFlexBoxWeatherToday img {
+        width: 175px;
+        height: 175px;
+        align-self: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #DetailFlexBoxWeatherToday h2 {
+        align-self: center;
+        font-weight: bold;
+        padding-bottom: 2px;
+    }
+
+#DetailFlexBoxWeatherTodayForecastHighLow {
+    align-self: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#DetailFlexBoxWeatherTodayForecastRecommendation {
+    align-self: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: darkgreen;
+    line-height: 10px;
+}
+
+#DetailFlexBoxWeatherTodayTemperatureRecommendation {
+    align-self: center;
+    font-weight: bold;
+    color: red;
+}
+
+#DetailFlexBoxWeatherFuture {
+    display: flex;
+}
+
+.DetailFlexBoxWeatherFutureDays {
+    display: inline-block;
+    flex-direction: column;
+    min-width: 120px;
+    justify-content: space-around;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-shadow: 10px 10px 5px grey;
+    padding: 20px;
+    margin: 10px;
+}
+
+    .DetailFlexBoxWeatherFutureDays img {
+        width: 120px;
+        padding-bottom: 10px;
+    }
+
+    .DetailFlexBoxWeatherFutureDays p {
+        line-height: 10px;
+    }
+
+#DetailFlexBoxWeatherFutureForecastHigh {
+    text-align: center;
+}
+
+#DetailFlexBoxWeatherFutureForecastLow {
+    text-align: center;
+}
+
+.temperature_toggle {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.button {
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+
+a.button {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.SurveyZone {
+    padding-bottom: 20px;
+}
+
+#SurveyForm {
+    max-width: 50%;
+    min-width: 300px;
+}
+
+#SurveySelectPark {
+}
+
+#SurveyEmailAddress {
+}
+
+#SurveyStateOfResidence {
+}
+
+#SurveySelectActivityLevel {
+}
+
+#SurveySubmitButtonZone {
+}
+
+#SurveySubmitButton {
+}
+
+#ResultsTable td {
+    vertical-align: middle;
+}
+
+#ResultsHeaderNumberOfVotes {
+    text-align: center;
+}
+
+#ResultsHeaderParkText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#ResultsHeaderNumberOfVotes {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#ResultsHeaderNumberOfVotesText {
+    text-align: center;
+}
+
+#ResultsParkImage {
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#ResultsParkName {
+    font-weight: bold;
+}
+
+#ResultsNumberOfVotesCell {
+    text-align: center;
+}
+
+#ResultsNumberOfVotes {
+}
+
+#ResultsParkLink {
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+    footer p {
+       
+        margin: 0px;
+        font-weight: bold;
+    }
